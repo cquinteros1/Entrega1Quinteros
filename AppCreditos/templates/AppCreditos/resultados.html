@@ -1,0 +1,25 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+
+{% block titulo_web %}
+
+RESULTADO BUSQUEDA
+
+{% endblock %}
+
+{% block campos_carga %}
+    
+    {% for cliente in Cliente %}
+
+    <p class="text-white font-weight-bold mb-1">DNI: {{cliente.dni}}</p>
+    <p class="text-white font-weight-bold mb-1">Nombre: {{cliente.nombre}}</p>
+    <p class="text-white font-weight-bold mb-1">Apellido: {{cliente.apellido}}</p>
+    <p class="text-white font-weight-bold mb-3">Fecha Nacimiento: {{cliente.fecha_nac}}</p>
+
+    {% endfor %}
+
+    <a class="btn btn-primary btn-xl" href="{% url 'BUSCAR' %}">VOLVER</a> <!--boton VOLVER-->
+    
+{% endblock %}

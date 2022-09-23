@@ -1,0 +1,25 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+
+{% block titulo_web %}
+
+BUSQUEDA DE CLIENTES
+
+{% endblock %}
+
+{% block campos_carga %}
+
+<p class="text-white font-weight-bold mb-1"> Ingrese el DNI:</p>
+
+    <form action="/AppCreditos/resultados/" method="GET">
+
+        <input type="number" name="dni" id="dni">
+        
+        <input type="submit" value="Buscar" class="btn btn-primary btn-xl" > <!--boton BUSCAR-->
+
+
+    </form>
+
+{% endblock %}

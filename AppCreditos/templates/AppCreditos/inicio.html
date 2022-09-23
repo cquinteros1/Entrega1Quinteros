@@ -1,0 +1,16 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+
+{% block titulo_web %}
+    BIENVENIDO A FINANCIERA S.A.
+{% endblock %}
+
+{% block campos_carga %}
+<p class="text-white font-weight-bold mb-1">Seleccione una opcion</p> 
+
+<a class="btn btn-primary btn-xl" href="{% url 'CREDITOS' %}">Créditos</a>
+
+<a class="btn btn-primary btn-xl" href="{% url 'BUSCAR' %}">Buscar</a>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'AppCreditos/padre.html' %}
+
+{% load static %}
+
+
+{% block titulo_web %}
+CARGA DE CREDITOS
+{% endblock %}
+
+{% block campos_carga %}
+<form action="/AppCreditos/creditos/" method="POST" class="text-white font-weight-bold mb-1">{% csrf_token %}
+
+    <p class="text-white font-weight-bold mb-1">Nro Credito: <input type="number" name="nro_cred"></p>
+    <p class="text-white font-weight-bold mb-1">Fecha Credito: <input type="date" name="fecha"></p>
+    <p class="text-white font-weight-bold mb-1">Importe: <input type="number" name="importe"></p>
+    <p class="text-white font-weight-bold mb-1">Cuotas: <input type="number" name="cuotas"></p>
+    <p class="text-white font-weight-bold mb-1">Nombre: <input type="text" name="nombre"></p>
+    <p class="text-white font-weight-bold mb-1">Apellido: <input type="text" name="apellido"></p>
+    <p class="text-white font-weight-bold mb-1">DNI: <input type="number" name="dni"></p>
+    <p class="text-white font-weight-bold mb-1">Fecha Nacimiento: <input type="date" name="fecha_nac"></p>
+    <p class="text-white font-weight-bold mb-1">Comercio: <input type="text" name="nombre_com"></p>
+    <p class="text-white font-weight-bold mb-3">Rubro: <input type="text" name="rubro"></p>
+
+    <input type="submit" value="Guardar" class="btn btn-primary btn-xl" > <!--boton GUARDAR-->
+
+</form>
+{% endblock %}
+
+<!--url al q vamos a enviar-->
